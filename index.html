@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="budgeticon.webp">
+</head>
+<body>
+  <div class="colorchanger">
+    <button onclick="changeTheme('standardTheme')" class="standardTheme colorchanger"></button>
+    <button onclick="changeTheme('lightTheme')" class="lightTheme colorchanger"></button>
+    <button onclick="changeTheme('darkerTheme')" class="darkerTheme colorchanger"></button>
+  </div>
+    <h1>Budget Tracker</h1>
+    <a href="www.linkedin.com/in/sikc" target="_blank"><p class="simran">Made by Simran</p></a>
+    
+    <main>
+        <header>
+            <div>
+                <h5>Total Balance</h5>
+                <span id="balance">RM 0.00</span>
+            </div>
+            <div>
+                <h5>Income</h5>
+                <span id="income">RM 0.00</span>
+            </div>
+            <div>
+                <h5>Expenses</h5>
+                <span id="expense">RM 0.00</span>
+            </div>
+        </header>
+        <section>
+            <h3>Transactions</h3>
+                <ul id="transactionslist"></ul>
+                <div id="status"></div>
+            
+        <section>
+            <h3>Add Transaction</h3>
+            <form id="transaction">
+                <div>
+                    <label for="type">
+                      <input type="checkbox" name="type" id="type" />
+                      <div class="option">
+                        <span>Expense</span>
+                        <span>Income</span>
+                      </div>
+                    </label>
+                  </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required />
+                  </div>
+                  <div>
+                    <label for="amount">Amount</label>
+                    <input
+                      type="number"
+                      name="amount"
+                      value="0"
+                      min="0.01"
+                      step="0.01"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" required />
+                  </div>
+                  <button class="submitt" type="submit">Submit</button>
+                </form>
+              </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
